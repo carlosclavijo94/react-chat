@@ -1,14 +1,14 @@
 import React from 'react'
-import { FaCode } from "react-icons/fa";
+import Img from './chat.png'
 
 function LandingPage() {
     return (
         <>
         <div className="app">
-            <FaCode style={{ fontSize: '4rem' }} /><br />
-            <span style={{ fontSize: '2rem' }}>Let's Start Coding!</span>
+            <img src={Img} style={{ fontSize: '4rem' }} /><br />
+            <span style={{ fontSize: '2rem' }}>Sistema de Mensajería</span>
         </div>
-        <div style={{ float:'right' }}>Thanks For Using This Boiler Plate by John Ahn</div>
+        <div style={{ float:'right' }}>Clavijo y Briones</div>
         </>
     )
 }
