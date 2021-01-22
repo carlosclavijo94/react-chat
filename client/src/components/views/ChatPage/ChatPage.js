@@ -42,6 +42,8 @@ export class ChatPage extends Component {
             <ChatCard key={chat._id}  {...chat} />
         ));
 
+        
+
     onDrop = (files) => {
         console.log(files)
 
@@ -115,7 +117,7 @@ export class ChatPage extends Component {
         return (
             <React.Fragment>
                 <div>
-                    <p style={{ fontSize: '2rem', textAlign: 'center' }}> Real Time Chat</p>
+                    <p style={{ fontSize: '2rem', textAlign: 'center' }}>Chat en Tiempo Real</p>
                 </div>
 
                 <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -137,7 +139,7 @@ export class ChatPage extends Component {
                                 <Input
                                     id="message"
                                     prefix={<Icon type="message" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                                    placeholder="Let's start talking"
+                                    placeholder=" Comienza a hablar..."
                                     type="text"
                                     value={this.state.chatMessage}
                                     onChange={this.hanleSearchChange}
@@ -175,7 +177,9 @@ const mapStateToProps = state => {
     return {
         user: state.user,
         chats: state.chat
+        
     }
+    
 }
 
 
