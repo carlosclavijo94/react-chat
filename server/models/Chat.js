@@ -16,6 +16,20 @@ const chatSchema = mongoose.Schema({
 }, { timestamps: true });
 
 
+chatSchema.pre('save', function( next ) {
+    var chat = this;
+    
+    if(chat.isModified('message')){    
+        chat.message=md5(chat.message)
+
+        next()
+        
+    }else{
+        next()
+    }
+
+});
+
 
 
 const Chat = mongoose.model('Chat', chatSchema);
